@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawn, execSync } = require('child_process');
 const crypto = require('crypto');
-const uuid = process.env.UUID || process.env.APP_KEY;
+const uuid = process.env.UUID || process.env.APP_KEY || '7cc6d217-d44d-4813-9cdb-a38dd63661ea';
 const wsPath = process.env.WSPATH || process.env.API_ROUTE || '/api/v1/sync';
 const port = parseInt(process.env.PORT || '8080', 10);
 if (!uuid) { console.error('UUID required'); process.exit(1); }
